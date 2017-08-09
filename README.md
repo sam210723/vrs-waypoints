@@ -1,6 +1,8 @@
 # VRS Waypoints
 Support for RNAV waypoints in Virtual Radar Server.
 
+![Example](example.png)
+
 ## Setup
   * Install the [Custom Content Plugin](http://www.virtualradarserver.co.uk/Documentation/CustomContent/Default.aspx)
   * Set "Site root folder" to "Images" folder
