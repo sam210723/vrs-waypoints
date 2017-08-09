@@ -1,0 +1,30 @@
+<!-- [START] YSSY Waypoints -->
+<script type="text/javascript">
+    if (VRS && VRS.globalDispatch && VRS.serverConfig) {
+        VRS.globalDispatch.hook(VRS.globalEvent.bootstrapCreated, function(bootStrap) {
+            bootStrap.hookInitialised(function(pageSettings) {
+                _Map = pageSettings.mapPlugin;
+
+                showWaypoints = true;
+
+                if (showWaypoints) {
+                    for (var i = 0; i < waypoints.length; i++) {
+                        marker = _Map.addMarker(waypoints[i].airport + "-" + waypoints[i].name, {
+                            clickable: true,
+                            draggable: false,
+                            editable: false,
+                            icon: waypoints[i].type + ".png",
+                            tooltip: waypoints[i].name,
+                            position: {
+                                lat: waypoints[i].lat,
+                                lng: waypoints[i].lng
+                            }
+                        });
+                    }
+
+                    console.log("Loaded " + waypoints.length + " waypoint(s)");
+                }
+            });
+        });
+    }
+</script>
