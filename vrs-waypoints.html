@@ -13,7 +13,10 @@
                             clickable: true,
                             draggable: false,
                             editable: false,
-                            icon: waypoints[i].type + ".png",
+                            icon: {
+                                url: waypoints[i].type + ".png",
+                            },
+                            visible: true,
                             tooltip: waypoints[i].name,
                             position: {
                                 lat: waypoints[i].lat,
